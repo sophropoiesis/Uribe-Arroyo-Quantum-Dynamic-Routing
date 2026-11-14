@@ -1,40 +1,150 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="ejIMqo1rNapkusPyYzuJRkLzOjeTAsAWEF6wP5mnPCA" />
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Uribe Arroyo Quantum Dynamic Routing (UAQDR) | Quantum Entropy Research</title>
-<meta name="description" content="Official research project page for Uribe Arroyo Quantum Dynamic Routing (UAQDR), a proposed feedback-controlled, multi-source QRNG architecture by Esteban Uribe Arroyo.">
-<meta name="author" content="Esteban Uribe Arroyo">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://sophropoiesis.github.io/Uribe-Arroyo-Quantum-Dynamic-Routing/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="UAQDR — Uribe Arroyo Quantum Dynamic Routing">
-<meta property="og:description" content="Research proposal: feedback-controlled routing across multiple independently monitored quantum entropy sources.">
-<meta property="og:url" content="https://sophropoiesis.github.io/Uribe-Arroyo-Quantum-Dynamic-Routing/">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="style.css">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ResearchProject",
-  "name":"Uribe Arroyo Quantum Dynamic Routing (UAQDR)",
-  "alternateName":"UAQDR",
-  "url":"https://sophropoiesis.github.io/Uribe-Arroyo-Quantum-Dynamic-Routing/",
-  "description":"A proposed quantum-derived feedback-controlled acquisition and conditioning architecture for multiple QRNG sources. No measured security improvement is claimed.",
-  "founder":{"@type":"Person","name":"Esteban Uribe Arroyo"},
-  "keywords":["Quantum random number generator","QRNG","Entropy pooling","Dynamic routing","NIST SP 800-90B"]
-}
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="ejIMqo1rNapkusPyYzuJRkLzOjeTAsAWEF6wP5mnPCA">
+  <title>Uribe Arroyo Quantum Dynamic Routing (UAQDR) — Research</title>
+  <meta name="description" content="Independent research on Uribe Arroyo Quantum Dynamic Routing (UAQDR), a proposed feedback-controlled, multi-source quantum entropy architecture by Esteban Uribe Arroyo.">
+  <meta name="author" content="Esteban Uribe Arroyo">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://sophropoiesis.github.io/Uribe-Arroyo-Quantum-Dynamic-Routing/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Uribe Arroyo Quantum Dynamic Routing (UAQDR)">
+  <meta property="og:description" content="A research proposal concerning feedback-controlled acquisition and conditioning across multiple QRNG sources.">
+  <meta property="og:url" content="https://sophropoiesis.github.io/Uribe-Arroyo-Quantum-Dynamic-Routing/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    "name": "Uribe Arroyo Quantum Dynamic Routing (UAQDR)",
+    "alternateName": "UAQDR",
+    "url": "https://sophropoiesis.github.io/Uribe-Arroyo-Quantum-Dynamic-Routing/",
+    "description": "A conceptual, quantum-derived feedback-controlled architecture for acquiring and conditioning measurements from multiple QRNGs. No measured security improvement is claimed.",
+    "founder": {"@type": "Person", "name": "Esteban Uribe Arroyo"},
+    "keywords": ["Quantum random-number generation", "QRNG", "Entropy pooling", "Dynamic routing", "NIST SP 800-90B"]
+  }
+  </script>
 </head>
 <body>
-<header class="sitehead"><div class="wrap nav"><a class="brand" href="./">UAQDR / RESEARCH</a><nav class="navlinks" aria-label="Main navigation"><a href="#abstract">Abstract</a><a href="#architecture">Architecture</a><a href="#validation">Validation</a><a href="paper.html">Paper</a></nav></div></header>
-<main>
-<div class="hero"><div class="wrap"><div class="eyebrow">Proposed quantum entropy architecture · v0.1</div><h1>Uribe Arroyo<br><span>Quantum Dynamic Routing.</span></h1><p class="lead">A research proposal exploring quantum-derived feedback control across multiple independently monitored quantum random-number generators.</p><div class="metarow"><span class="chip">Esteban Uribe Arroyo</span><span class="chip">Technical research draft · 2026</span><span class="chip">Not independently validated</span></div><div class="actions"><a class="btn" href="paper.html">Read the research abstract</a><a class="btn secondary" href="UAQDR_Whitepaper_v0.1.pdf">Download technical draft PDF</a></div></div></div>
-<section id="abstract"><div class="wrap"><div class="eyebrow">01 / Research definition</div><h2>Abstract</h2><p class="abstract">Uribe Arroyo Quantum Dynamic Routing (UAQDR) is a proposed entropy-acquisition and conditioning architecture that combines measurements from multiple quantum random-number generators (QRNGs). It uses QRNG-derived confidential control material to vary the order in which later source measurements are collected. The proposal integrates per-source health checks, authenticated provenance assumptions, cryptographic conditioning, and conservative failure policies. Its purpose is to test whether feedback-controlled routing improves measurable resilience or changes information leakage compared with matched static and independently randomized routing methods. No cryptographic security advantage has yet been demonstrated.</p><div class="callout"><p><strong>Scientific status:</strong> Defined as a conceptual system and test plan. Dynamic routing does not create entropy, prove unpredictability, or neutralize side-channel attacks by itself.</p></div></div></section>
-<section id="architecture"><div class="wrap"><div class="eyebrow">02 / Proposed mechanism</div><h2>Feedback-controlled multi-source collection</h2><div class="diagram" role="img" aria-label="Quantum generators feed source health tests, a feedback-controlled routing scheduler, entropy conditioning, and output generation."><div class="node">Independent QRNG sources</div><div class="arrow">→</div><div class="node">Raw health tests</div><div class="arrow">→</div><div class="node">Dynamic acquisition order</div><div class="arrow">→</div><div class="node">Conditioning &amp; separation</div><div class="arrow">→</div><div class="node">Output + next route seed</div></div><div class="grid"><article class="panel"><div class="num">01 · Physical sources</div><h3>Source diversity</h3><p>Collect separately tagged measurements from independently characterized QRNG hardware.</p></article><article class="panel"><div class="num">02 · Feedback</div><h3>Private schedule control</h3><p>Use prior accepted quantum-derived internal material to choose the next bounded acquisition order.</p></article><article class="panel"><div class="num">03 · Conditioning</div><h3>Conservative output</h3><p>Frame measurements unambiguously and apply reviewed conditioning, without double-counting entropy.</p></article></div></div></section>
-<section id="validation"><div class="wrap two"><div><div class="eyebrow">03 / Evidence and falsification</div><h2>Test the hypothesis—not the slogan.</h2><p>UAQDR is intended to be evaluated against one-source, fixed-order multi-source, and independently randomized multi-source baselines. The comparison must hold hardware, sampling budgets, conditioning, and environments constant.</p><p>The primary outcomes are conservative entropy bounds, failure recovery, measured side-channel leakage, latency, throughput, and power consumption. Negative or inconclusive findings will be important.</p></div><div class="panel"><div class="stat"><strong>NIST SP 800-90B</strong><span>Entropy source assessment and health testing</span></div><div class="stat"><strong>NIST SP 800-90C</strong><span>Random bit generator constructions; final September 2025</span></div><div class="stat"><strong>Publication DOI</strong><span>Pending release of the reviewed whitepaper</span></div><div class="stat"><strong>Security / peer review</strong><span>Not yet independently evaluated</span></div></div></div></section>
-<section id="research"><div class="wrap"><div class="eyebrow">04 / Documentation</div><h2>Technical paper and references</h2><p>Explore the formal research draft, assumptions, threat model, and proposed comparative testing framework.</p><div class="actions"><a class="btn" href="paper.html">Paper abstract and citation</a><a class="btn secondary" href="https://github.com/sophropoiesis/Uribe-Arroyo-Quantum-Dynamic-Routing/blob/main/paper/UAQDR_Whitepaper_v0.1.md">Read Markdown on GitHub</a></div><div class="refs" style="margin-top:28px"><a href="https://doi.org/10.6028/NIST.SP.800-90B">NIST SP 800-90B — Entropy Sources</a><a href="https://doi.org/10.6028/NIST.SP.800-90C">NIST SP 800-90C — RBG Constructions</a><a href="https://doi.org/10.1103/PhysRevA.87.062327">Quantum randomness postprocessing — Physical Review A</a></div></div></section>
-</main><footer><div class="wrap">© 2026 Esteban Uribe Arroyo · UAQDR research proposal · Technical claims subject to future validation.</div></footer>
-</body></html>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="site-name" href="./" aria-label="UAQDR homepage">UAQDR<span class="site-name-detail">/ Independent research</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#abstract">Overview</a>
+        <a href="#method">Method</a>
+        <a href="paper.html">Paper</a>
+        <a href="https://github.com/sophropoiesis/Uribe-Arroyo-Quantum-Dynamic-Routing">Repository</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <header class="intro">
+        <p class="eyeline">Independent research <span class="eyeline-divider">/</span> Quantum randomness <span class="eyeline-divider">/</span> 2026</p>
+        <h1>Uribe Arroyo<br> Quantum Dynamic Routing</h1>
+        <p class="intro-summary">A proposed feedback-controlled architecture for acquiring and conditioning entropy from multiple quantum random-number generators.</p>
+        <dl class="publication-meta">
+          <div><dt>Author</dt><dd>Esteban Uribe Arroyo</dd></div>
+          <div><dt>Current site draft</dt><dd>Version 0.1 · 13 November 2026</dd></div>
+          <div><dt>Research status</dt><dd>Conceptual proposal; not independently validated</dd></div>
+        </dl>
+        <div class="document-links" aria-label="Research documents">
+          <a class="primary-link" href="paper.html">Read the research note <span aria-hidden="true">↗</span></a>
+          <a href="UAQDR_Whitepaper_v0.1.pdf">Download PDF (v0.1) <span aria-hidden="true">↗</span></a>
+        </div>
+      </header>
+
+      <div class="editorial-layout">
+        <aside class="page-aside" aria-label="Page contents">
+          <p class="aside-title">Contents</p>
+          <ol>
+            <li><a href="#abstract">Abstract</a></li>
+            <li><a href="#method">Architecture</a></li>
+            <li><a href="#evaluation">Evaluation</a></li>
+            <li><a href="#documents">Documents &amp; sources</a></li>
+          </ol>
+          <div class="aside-note">
+            <p class="aside-title">Scope</p>
+            <p>This page describes a proposal, not a deployed or certified random-bit generator.</p>
+          </div>
+        </aside>
+
+        <div class="article-body">
+          <section id="abstract" class="article-section">
+            <p class="section-index">01 / Research overview</p>
+            <h2>Abstract</h2>
+            <p>Uribe Arroyo Quantum Dynamic Routing (UAQDR) is a proposed entropy-acquisition and conditioning architecture that combines measurements from multiple quantum random-number generators (QRNGs). QRNG-derived confidential control material determines the order in which later source measurements are collected.</p>
+            <p>The proposal incorporates per-source health checks, source provenance assumptions, cryptographic conditioning, and conservative failure policies. It asks whether feedback-controlled routing changes measurable fault resilience or information leakage compared with matched static and independently randomized routing approaches.</p>
+            <p class="note"><strong>Limit of the claim.</strong> Dynamic routing does not create entropy, prove unpredictability, or inherently prevent side-channel attacks. No cryptographic security advantage has been demonstrated.</p>
+          </section>
+
+          <section id="method" class="article-section">
+            <p class="section-index">02 / Proposed method</p>
+            <h2>Architecture</h2>
+            <p>The system is organized around independently characterized entropy sources, bounded collection epochs, and the separation of public output from private routing state.</p>
+
+            <figure class="system-figure">
+              <figcaption><strong>Figure 1.</strong> Conceptual flow of acquisition and conditioning</figcaption>
+              <ol class="process-flow">
+                <li><span class="step-id">A</span><span>Independent<br> QRNG sources</span></li>
+                <li><span class="step-id">B</span><span>Raw-data<br> health checks</span></li>
+                <li><span class="step-id">C</span><span>Bounded<br> acquisition order</span></li>
+                <li><span class="step-id">D</span><span>Cryptographic<br> conditioning</span></li>
+                <li><span class="step-id">E</span><span>Output and private<br> next-epoch state</span></li>
+              </ol>
+              <p class="figure-caption">Private control material accepted during one epoch influences the next epoch's acquisition order. The diagram is schematic; it is not an implemented hardware pipeline.</p>
+            </figure>
+
+            <dl class="definition-list">
+              <div><dt>Source diversity</dt><dd>Measurements are gathered from separately identified and independently characterized QRNG sources.</dd></div>
+              <div><dt>Delayed feedback</dt><dd>Previously accepted quantum-derived internal material selects the next bounded acquisition schedule.</dd></div>
+              <div><dt>Output separation</dt><dd>Measurements are framed and conditioned without double-counting entropy; public output and private control uses remain distinct.</dd></div>
+            </dl>
+          </section>
+
+          <section id="evaluation" class="article-section">
+            <p class="section-index">03 / Experimental design</p>
+            <h2>Evaluation and falsification</h2>
+            <p>The proposed architecture requires comparison against one-source, fixed-order multi-source, and independently randomized multi-source baselines. Comparisons should control for hardware, sampling budgets, conditioning, and environmental conditions.</p>
+            <table class="research-table">
+              <caption>Proposed measures for comparative study</caption>
+              <tbody>
+                <tr><th scope="row">Entropy</th><td>Conservative entropy bounds and source-health outcomes</td></tr>
+                <tr><th scope="row">Robustness</th><td>Fault isolation and recovery after source degradation</td></tr>
+                <tr><th scope="row">Observability</th><td>Measured side-channel leakage and other externally visible differences</td></tr>
+                <tr><th scope="row">Cost</th><td>Latency, throughput, and power consumption</td></tr>
+              </tbody>
+            </table>
+            <p>Negative or inconclusive results are informative. Claims of improvement would require reproducible evidence, not simply the presence of a dynamic schedule.</p>
+          </section>
+
+          <section id="documents" class="article-section">
+            <p class="section-index">04 / Documentation</p>
+            <h2>Documents and sources</h2>
+            <ul class="link-list">
+              <li><a href="paper.html">Research abstract and provisional citation <span aria-hidden="true">↗</span></a><span>HTML</span></li>
+              <li><a href="UAQDR_Whitepaper_v0.1.pdf">Technical research draft <span aria-hidden="true">↗</span></a><span>PDF · v0.1</span></li>
+              <li><a href="https://github.com/sophropoiesis/Uribe-Arroyo-Quantum-Dynamic-Routing/blob/main/paper/UAQDR_Whitepaper_v0.1.md">Full draft in the source repository <span aria-hidden="true">↗</span></a><span>Markdown</span></li>
+            </ul>
+            <h3 class="minor-heading">Selected technical references</h3>
+            <ol class="references">
+              <li>NIST. <a href="https://doi.org/10.6028/NIST.SP.800-90B">SP 800-90B — Entropy Sources</a> (2018).</li>
+              <li>NIST. <a href="https://doi.org/10.6028/NIST.SP.800-90C">SP 800-90C — Random Bit Generator Constructions</a> (2025).</li>
+              <li>Ma et al. <a href="https://doi.org/10.1103/PhysRevA.87.062327">Quantum randomness postprocessing</a>. <em>Physical Review A</em> (2013).</li>
+            </ol>
+            <p class="fine-print">A publication DOI has not yet been assigned. This work has not been independently peer reviewed or certified.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner"><span>© 2026 Esteban Uribe Arroyo</span><span>UAQDR · Independent research proposal</span></div>
+  </footer>
+</body>
+</html>
