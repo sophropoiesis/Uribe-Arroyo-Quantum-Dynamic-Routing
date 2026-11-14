@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you refer to the UAQDR research proposal, cite this versioned technical draft; a formal DOI is pending."
+title: "Uribe Arroyo Quantum Dynamic Routing (UAQDR): A Proposed Feedback-Controlled, Multi-Source Quantum Entropy Architecture"
+authors:
+  - family-names: "Uribe Arroyo"
+    given-names: "Esteban"
+type: generic
+version: "0.1"
+date-released: 2026-11-13
